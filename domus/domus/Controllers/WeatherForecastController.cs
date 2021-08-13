@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using domus.Authentication;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -8,7 +10,7 @@ using System.Threading.Tasks;
 namespace domus.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/test")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
