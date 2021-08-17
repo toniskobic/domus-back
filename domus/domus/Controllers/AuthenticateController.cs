@@ -60,6 +60,11 @@ namespace JWTAuthentication.Controllers
 
                 return Ok(new
                 {
+                    Id = user.Id,
+                    dormitoryId = user.DormitoryId,
+                    firstname = user.FirstName,
+                    lastname = user.LastName,
+                    username = user.UserName,
                     token = new JwtSecurityTokenHandler().WriteToken(token),
                     expiration = token.ValidTo
                 });

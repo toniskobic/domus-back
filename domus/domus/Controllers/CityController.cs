@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace domus.Controllers
 {
-    [Authorize(Roles = UserRoles.Admin)]
+    //[Authorize(Roles = UserRoles.Admin)]
     [Route("api/city")]
     [ApiController]
     public class CityController : ControllerBase

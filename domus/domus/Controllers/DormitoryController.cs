@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 
 namespace domus.Controllers
 {
-    [Authorize(Roles = UserRoles.Admin)]
     [Route("api/dormitory")]
     [ApiController]
     public class DormitoryController : ControllerBase
@@ -31,6 +30,7 @@ namespace domus.Controllers
         }
 
         // GET: api/dormitory/5
+        [Authorize(Roles = UserRoles.Admin)]
         [HttpGet("{id}", Name = "GetDormitory")]
         public IActionResult Get(int id)
         {
@@ -44,6 +44,7 @@ namespace domus.Controllers
         }
 
         // POST: api/dormitory
+        [Authorize(Roles = UserRoles.Admin)]
         [HttpPost]
         public IActionResult Post([FromBody] Dormitory dormitory)
         {
@@ -62,6 +63,7 @@ namespace domus.Controllers
         }
 
         // PUT: api/dormitory/5
+        [Authorize(Roles = UserRoles.Admin)]
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody] Dormitory dormitory)
         {
@@ -86,6 +88,7 @@ namespace domus.Controllers
         }
 
         // DELETE: api/dormitory/5
+        [Authorize(Roles = UserRoles.Admin)]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
