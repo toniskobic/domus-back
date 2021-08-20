@@ -11,7 +11,6 @@ using System.Threading.Tasks;
 
 namespace domus.Controllers
 {
-    [Authorize(Roles = UserRoles.Admin)]
     [Route("api/eventType")]
     [ApiController]
     public class EventTypeController : ControllerBase
@@ -24,6 +23,7 @@ namespace domus.Controllers
         }
 
         // GET: api/eventType
+        [Authorize]
         [HttpGet]
         public IActionResult Get()
         {
@@ -32,6 +32,7 @@ namespace domus.Controllers
         }
 
         // GET: api/eventType/5
+        [Authorize(Roles = UserRoles.Admin)]
         [HttpGet("{id}", Name = "GetEventType")]
         public IActionResult Get(int id)
         {
@@ -45,6 +46,7 @@ namespace domus.Controllers
         }
 
         // POST: api/eventType
+        [Authorize(Roles = UserRoles.Admin)]
         [HttpPost]
         public IActionResult Post([FromBody] EventType eventType)
         {
@@ -63,6 +65,7 @@ namespace domus.Controllers
         }
 
         // PUT: api/eventType/5
+        [Authorize(Roles = UserRoles.Admin)]
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody] EventType eventType)
         {
@@ -87,6 +90,7 @@ namespace domus.Controllers
         }
 
         // DELETE: api/eventType/5
+        [Authorize(Roles = UserRoles.Admin)]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {

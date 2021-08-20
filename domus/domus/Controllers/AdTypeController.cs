@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 
 namespace domus.Controllers
 {
-    [Authorize(Roles = UserRoles.Admin)]
     [Route("api/adType")]
     [ApiController]
     public class AdTypeController : ControllerBase
@@ -23,6 +22,7 @@ namespace domus.Controllers
         }
 
         // GET: api/adType
+        [Authorize]
         [HttpGet]
         public IActionResult Get()
         {
@@ -31,6 +31,7 @@ namespace domus.Controllers
         }
 
         // GET: api/adType/5
+        [Authorize(Roles = UserRoles.Admin)]
         [HttpGet("{id}", Name = "GetAdType")]
         public IActionResult Get(int id)
         {
@@ -44,6 +45,7 @@ namespace domus.Controllers
         }
 
         // POST: api/adType
+        [Authorize(Roles = UserRoles.Admin)]
         [HttpPost]
         public IActionResult Post([FromBody] AdType adType)
         {
@@ -62,6 +64,7 @@ namespace domus.Controllers
         }
 
         // PUT: api/adType/5
+        [Authorize(Roles = UserRoles.Admin)]
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody] AdType adType)
         {
@@ -86,6 +89,7 @@ namespace domus.Controllers
         }
 
         // DELETE: api/adType/5
+        [Authorize(Roles = UserRoles.Admin)]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
