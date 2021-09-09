@@ -17,5 +17,9 @@ namespace domus.Authentication
         public virtual Dormitory Dormitory { get; set; }
 
         public virtual ICollection<Participant> Participants { get; set; }
+        public virtual ICollection<Event> Events { get; set; }
+        public virtual ICollection<Ad> Ads { get; set; }
+
+
     }
 }

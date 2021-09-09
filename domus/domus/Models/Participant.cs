@@ -20,7 +20,7 @@ namespace domus.Models
         public bool Declined { get; set; }
         [DataMember]
         public string Explanation { get; set; }
-        
+        [DataMember]
         public ApplicationUser User { get; set; }
 
         public virtual Event Event { get; set; }

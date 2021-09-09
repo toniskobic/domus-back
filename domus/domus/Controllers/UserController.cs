@@ -11,8 +11,8 @@ using System.Threading.Tasks;
 
 namespace domus.Controllers
 {
-    [Authorize(Roles = UserRoles.Admin)]
-    [Route("api/user")]
+    [Authorize]
+    [Route("api/users")]
     [ApiController]
     public class UserController : ControllerBase
     {
@@ -23,7 +23,7 @@ namespace domus.Controllers
             _dataRepository = dataRepository;
         }
 
-        // GET: api/user
+        // GET: api/users
         [HttpGet]
         public IActionResult Get()
         {

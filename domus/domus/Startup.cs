@@ -39,13 +39,13 @@ namespace domus
             services.ConfigureCors();
             services.ConfigureIISIntegration();
 
-            services.AddDbContext<domusContext>(opts => opts.UseSqlServer(Configuration["ConnectionString:domusDB"]));
+            services.AddDbContext<domusContext>(opts => opts.UseSqlServer(Configuration["ConnectionString:domusLocalDB"]));
             services.AddScoped<IDataRepository<EventType>, EventTypeDataManager>();
             services.AddScoped<IDataRepository<AdType>, AdTypeDataManager>();
             services.AddScoped<IDataRepository<City>, CityDataManager>();
             services.AddScoped<IDataRepository<Dormitory>, DormitoryDataManager>();
             services.AddScoped<IDataRepository<Ad>, AdDataManager>();
-            services.AddScoped<IDataRepository<Participant>, ParticipantDataManager>();
+            services.AddScoped<IParticipantRepository<Participant>, ParticipantDataManager>();
             services.AddScoped<IDataRepository<Event>, EventDataManager>();
             services.AddScoped<IDataRepository<ApplicationUser>, UserDataManager>();
 

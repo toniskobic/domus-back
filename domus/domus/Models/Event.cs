@@ -35,8 +35,11 @@ namespace domus.Models
         public int DormitoryId { get; set; }
 
         public virtual Dormitory Dormitory { get; set; }
-        public AdType User { get; set; }
+        [DataMember]
+        public virtual ApplicationUser User { get; set; }
+        [DataMember]
         public virtual EventType EventType { get; set; }
+        [DataMember]
         public virtual ICollection<Participant> Participants { get; set; }
     }
 }

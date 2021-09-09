@@ -21,7 +21,9 @@ namespace domus.Models
         [DataMember]
         public string UserId { get; set; }
 
-        public ApplicationUser User { get; set; }
+        [DataMember]
+        public virtual ApplicationUser User { get; set; }
+        [DataMember]
         public virtual AdType AdType { get; set; }
     }
 }

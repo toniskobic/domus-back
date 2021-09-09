@@ -10,8 +10,8 @@ using System.Threading.Tasks;
 
 namespace domus.Controllers
 {
-    //[Authorize(Roles = UserRoles.Admin)]
-    [Route("api/city")]
+    [Authorize(Roles = UserRoles.Admin)]
+    [Route("api/cities")]
     [ApiController]
     public class CityController : ControllerBase
     {
@@ -22,7 +22,7 @@ namespace domus.Controllers
             _dataRepository = dataRepository;
         }
 
-        // GET: api/city
+        // GET: api/cities
         [HttpGet]
         public IActionResult Get()
         {
@@ -30,7 +30,7 @@ namespace domus.Controllers
             return Ok(cities);
         }
 
-        // GET: api/city/5
+        // GET: api/cities/5
         [HttpGet("{id}", Name = "GetCity")]
         public IActionResult Get(int id)
         {
@@ -43,7 +43,7 @@ namespace domus.Controllers
             return Ok(city);
         }
 
-        // POST: api/city
+        // POST: api/cities
         [HttpPost]
         public IActionResult Post([FromBody] City city)
         {
@@ -61,7 +61,7 @@ namespace domus.Controllers
             return CreatedAtRoute("GetCity", new { Id = city.Id }, null);
         }
 
-        // PUT: api/city/5
+        // PUT: api/cities/5
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody] City city)
         {
@@ -85,7 +85,7 @@ namespace domus.Controllers
             return NoContent();
         }
 
-        // DELETE: api/city/5
+        // DELETE: api/cities/5
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {

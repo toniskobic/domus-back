@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace domus.Models.DataManager
 {
-    public class ParticipantDataManager : IDataRepository<Participant>
+    public class ParticipantDataManager : IParticipantRepository<Participant>
     {
         readonly domusContext _domusContext;
 
@@ -27,6 +27,11 @@ namespace domus.Models.DataManager
                 .SingleOrDefault(b => b.EventId == id);
 
             return entity;
+        }
+
+        public IEnumerable<Participant> GetParticipants(long id)
+        {
+            return _domusContext.Participants.Where(b => b.EventId == id).ToList();
         }
 
         public void Add(Participant entity)

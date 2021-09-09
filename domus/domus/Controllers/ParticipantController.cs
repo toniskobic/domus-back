@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 namespace domus.Controllers
 {
     [Authorize]
-    [Route("api/participant")]
+    [Route("api/participants")]
     [ApiController]
     public class ParticipantController : ControllerBase
     {
-        private readonly IDataRepository<Participant> _dataRepository;
+        private readonly IParticipantRepository<Participant> _dataRepository;
 
-        public ParticipantController(IDataRepository<Participant> dataRepository)
+        public ParticipantController(IParticipantRepository<Participant> dataRepository)
         {
             _dataRepository = dataRepository;
         }
@@ -29,11 +29,11 @@ namespace domus.Controllers
             return Ok(participants);
         }
 
-        // GET: api/participant/5
+        // GET: api/participants/5
         [HttpGet("{id}", Name = "GetParticipant")]
         public IActionResult Get(int id)
         {
-            var participant = _dataRepository.Get(id);
+            var participant = _dataRepository.GetParticipants(id);
             if (participant == null)
             {
                 return NotFound("Sudionik nije pronađen.");
@@ -42,7 +42,7 @@ namespace domus.Controllers
             return Ok(participant);
         }
 
-        // POST: api/participant
+        // POST: api/participants
         [HttpPost]
         public IActionResult Post([FromBody] Participant participant)
         {
@@ -57,10 +57,10 @@ namespace domus.Controllers
             }
 
             _dataRepository.Add(participant);
-            return CreatedAtRoute("GetParticipant", new { EventId = participant.EventId, UserId = participant.UserId }, null);
+            return Ok(participant);
         }
 
-        // PUT: api/participant/5
+        // PUT: api/participants/5
         [HttpPut("{dogadjajId}/{korisnikId}")]
         public IActionResult Put(int dogadjajId, int korisnikId, [FromBody] Participant participant)
         {
@@ -84,7 +84,7 @@ namespace domus.Controllers
             return NoContent();
         }
 
-        // DELETE: api/ad/5
+        // DELETE: api/participants/5/2
         [HttpDelete("{dogadjajId}/{korisnikId}")]
         public IActionResult Delete(int id)
         {

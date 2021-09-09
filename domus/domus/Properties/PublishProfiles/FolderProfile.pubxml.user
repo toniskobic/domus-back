@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\Korisnik\domus-back\domus\domus\bin\Release\netcoreapp3.1\publish\</_PublishTargetUrl>
+    <History>True|2021-08-21T10:25:39.8074050Z;True|2021-08-21T12:16:42.8010661+02:00;</History>
+  </PropertyGroup>
+</Project>

@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace domus.Controllers
 {
-    [Route("api/eventType")]
+    [Route("api/event-types")]
     [ApiController]
     public class EventTypeController : ControllerBase
     {
@@ -22,7 +22,7 @@ namespace domus.Controllers
             _dataRepository = dataRepository;
         }
 
-        // GET: api/eventType
+        // GET: api/event-types
         [Authorize]
         [HttpGet]
         public IActionResult Get()
@@ -31,7 +31,7 @@ namespace domus.Controllers
             return Ok(eventTypes);
         }
 
-        // GET: api/eventType/5
+        // GET: api/event-types/5
         [Authorize(Roles = UserRoles.Admin)]
         [HttpGet("{id}", Name = "GetEventType")]
         public IActionResult Get(int id)
@@ -45,7 +45,7 @@ namespace domus.Controllers
             return Ok(eventType);
         }
 
-        // POST: api/eventType
+        // POST: api/event-types
         [Authorize(Roles = UserRoles.Admin)]
         [HttpPost]
         public IActionResult Post([FromBody] EventType eventType)
@@ -64,7 +64,7 @@ namespace domus.Controllers
             return CreatedAtRoute("GetEventType", new { Id = eventType.Id }, null);
         }
 
-        // PUT: api/eventType/5
+        // PUT: api/event-types/5
         [Authorize(Roles = UserRoles.Admin)]
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody] EventType eventType)
@@ -89,7 +89,7 @@ namespace domus.Controllers
             return NoContent();
         }
 
-        // DELETE: api/eventType/5
+        // DELETE: api/event-types/5
         [Authorize(Roles = UserRoles.Admin)]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)

@@ -18,12 +18,15 @@ namespace domus.Models.DataManager
 
         public IEnumerable<Event> GetAll()
         {
-            return _domusContext.Events.ToList();
+            return _domusContext.Events
+                .Include(a => a.User)
+                .Include(a => a.EventType)
+                .Include(a => a.Participants);
         }
 
         public Event Get(long id)
         {
-            var entity = _domusContext.Events
+            var entity = _domusContext.Events.Include(a => a.Participants).ThenInclude(a => a.User).Include(a => a.User).Include(a => a.EventType)
                 .SingleOrDefault(b => b.Id == id);
 
             return entity;

@@ -18,7 +18,7 @@ namespace domus.Models.DataManager
 
         public IEnumerable<Ad> GetAll()
         {
-            return _domusContext.Ads.ToList();
+            return _domusContext.Ads.Include(a => a.User).Include(a => a.AdType);
         }
 
         public Ad Get(long id)

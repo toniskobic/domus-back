@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace domus.Controllers
 {
     [Authorize]
-    [Route("api/event")]
+    [Route("api/events")]
     [ApiController]
     public class EventController : ControllerBase
     {

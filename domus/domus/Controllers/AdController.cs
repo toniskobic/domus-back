@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace domus.Controllers
 {
     [Authorize]
-    [Route("api/ad")]
+    [Route("api/ads")]
     [ApiController]
     public class AdController : ControllerBase
     {
@@ -21,7 +21,7 @@ namespace domus.Controllers
             _dataRepository = dataRepository;
         }
 
-        // GET: api/ad
+        // GET: api/ads
         [HttpGet]
         public IActionResult Get()
         {
@@ -29,7 +29,7 @@ namespace domus.Controllers
             return Ok(ads);
         }
 
-        // GET: api/ad/5
+        // GET: api/ads/5
         [HttpGet("{id}", Name = "GetAd")]
         public IActionResult Get(int id)
         {
@@ -42,7 +42,7 @@ namespace domus.Controllers
             return Ok(ad);
         }
 
-        // POST: api/ad
+        // POST: api/ads
         [HttpPost]
         public IActionResult Post([FromBody] Ad ad)
         {
@@ -60,7 +60,7 @@ namespace domus.Controllers
             return CreatedAtRoute("GetAd", new { Id = ad.Id }, null);
         }
 
-        // PUT: api/ad/5
+        // PUT: api/ads/5
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody] Ad ad)
         {
@@ -84,7 +84,7 @@ namespace domus.Controllers
             return NoContent();
         }
 
-        // DELETE: api/ad/5
+        // DELETE: api/ads/5
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {

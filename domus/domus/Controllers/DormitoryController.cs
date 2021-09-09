@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace domus.Controllers
 {
-    [Route("api/dormitory")]
+    [Route("api/dormitories")]
     [ApiController]
     public class DormitoryController : ControllerBase
     {
@@ -21,7 +21,7 @@ namespace domus.Controllers
             _dataRepository = dataRepository;
         }
 
-        // GET: api/dormitory
+        // GET: api/dormitories
         [HttpGet]
         public IActionResult Get()
         {

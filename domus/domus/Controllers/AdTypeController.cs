@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace domus.Controllers
 {
-    [Route("api/adType")]
+    [Route("api/ad-types")]
     [ApiController]
     public class AdTypeController : ControllerBase
     {
@@ -21,7 +21,7 @@ namespace domus.Controllers
             _dataRepository = dataRepository;
         }
 
-        // GET: api/adType
+        // GET: api/ad-types
         [Authorize]
         [HttpGet]
         public IActionResult Get()
@@ -30,7 +30,7 @@ namespace domus.Controllers
             return Ok(adTypes);
         }
 
-        // GET: api/adType/5
+        // GET: api/ad-types/5
         [Authorize(Roles = UserRoles.Admin)]
         [HttpGet("{id}", Name = "GetAdType")]
         public IActionResult Get(int id)
@@ -44,7 +44,7 @@ namespace domus.Controllers
             return Ok(adType);
         }
 
-        // POST: api/adType
+        // POST: api/ad-types
         [Authorize(Roles = UserRoles.Admin)]
         [HttpPost]
         public IActionResult Post([FromBody] AdType adType)
@@ -63,7 +63,7 @@ namespace domus.Controllers
             return CreatedAtRoute("GetAdType", new { Id = adType.Id }, null);
         }
 
-        // PUT: api/adType/5
+        // PUT: api/ad-types/5
         [Authorize(Roles = UserRoles.Admin)]
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody] AdType adType)
@@ -88,7 +88,7 @@ namespace domus.Controllers
             return NoContent();
         }
 
-        // DELETE: api/adType/5
+        // DELETE: api/ad-types/5
         [Authorize(Roles = UserRoles.Admin)]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
