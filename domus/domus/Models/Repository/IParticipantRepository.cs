@@ -10,6 +10,7 @@ namespace domus.Models.Repository
         IEnumerable<TEntity> GetAll();
         IEnumerable<TEntity> GetParticipants(long id);
         TEntity Get(long id);
+        TEntity GetParticipant(long eventId, string userId);
         void Add(TEntity entity);
         void Update(TEntity entityToUpdate, TEntity entity);
         void Delete(TEntity entity);

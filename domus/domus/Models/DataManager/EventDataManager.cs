@@ -21,7 +21,8 @@ namespace domus.Models.DataManager
             return _domusContext.Events
                 .Include(a => a.User)
                 .Include(a => a.EventType)
-                .Include(a => a.Participants);
+                .Include(a => a.Participants)
+                .Where(a => a.DateTo < DateTime.Now);   
         }
 
         public Event Get(long id)

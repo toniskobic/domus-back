@@ -72,7 +72,31 @@ namespace domus.Controllers
             var participantToUpdate = _dataRepository.Get(dogadjajId);
             if (participantToUpdate == null)
             {
-                return NotFound("Oglas nije pronađen.");
+                return NotFound("Sudionik nije pronađen.");
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+
+            _dataRepository.Update(participantToUpdate, participant);
+            return NoContent();
+        }
+
+        // PATCH: api/participants/5
+        [HttpPatch("{eventId}/{userId}")]
+        public IActionResult Patch(int eventId, string userId, [FromBody] Participant participant)
+        {
+            if (participant == null)
+            {
+                return BadRequest("Sudionik je prazan.");
+            }
+
+            var participantToUpdate = _dataRepository.GetParticipant(eventId, userId);
+            if (participantToUpdate == null)
+            {
+                return NotFound("Sudionik nije pronađen.");
             }
 
             if (!ModelState.IsValid)
