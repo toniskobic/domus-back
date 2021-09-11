@@ -24,6 +24,13 @@
   </Class>
   <Class Name="domus.Models.DataManager.CityDataManager" BaseTypeListCollapsed="true">
     <Position X="3" Y="3.25" Width="1.5" />
+    <AssociationLine Name="_domusContext" Type="domus.Models.domusContext" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.5" Y="5.315" />
+        <Point X="3.5" Y="5.938" />
+        <Point X="6.25" Y="5.938" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAZAAAAAAAAAAABAAAAAAAAAAAEAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>Models\DataManager\CityDataManager.cs</FileName>
