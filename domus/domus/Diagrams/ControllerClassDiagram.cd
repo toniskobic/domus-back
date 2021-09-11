@@ -132,21 +132,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="JWTAuthentication.Controllers.AuthenticateController">
-    <Position X="24.75" Y="5.5" Width="1.5" />
-    <AssociationLine Name="_configuration" Type="Microsoft.Extensions.Configuration.IConfiguration" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="25" Y="5.5" />
-        <Point X="25" Y="4.34" />
-        <Point X="22.375" Y="4.34" />
-        <Point X="22.375" Y="2.94" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="roleManager" Type="Microsoft.AspNetCore.Identity.RoleManager&lt;TRole&gt;" FixedFromPoint="true">
-      <Path>
-        <Point X="25.438" Y="5.5" />
-        <Point X="25.438" Y="1.562" />
-      </Path>
-    </AssociationLine>
+    <Position X="24.75" Y="5.5" Width="2" />
     <AssociationLine Name="userManager" Type="Microsoft.AspNetCore.Identity.UserManager&lt;TUser&gt;" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="24.75" Y="6.405" />
@@ -156,18 +142,32 @@
         <Point X="19.875" Y="1.562" />
       </Path>
     </AssociationLine>
+    <AssociationLine Name="roleManager" Type="Microsoft.AspNetCore.Identity.RoleManager&lt;TRole&gt;" FixedFromPoint="true">
+      <Path>
+        <Point X="25.667" Y="5.5" />
+        <Point X="25.667" Y="1.562" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_configuration" Type="Microsoft.Extensions.Configuration.IConfiguration" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="25.083" Y="5.5" />
+        <Point X="25.083" Y="4.34" />
+        <Point X="22.375" Y="4.34" />
+        <Point X="22.375" Y="2.94" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AIAAAAAAAAAAAAAgAAAAAAAAAAABIAAAAAEQAAAAAAA=</HashCode>
       <FileName>Controllers\AuthenticateController.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="_configuration" />
-      <Field Name="roleManager" />
       <Field Name="userManager" />
+      <Field Name="roleManager" />
+      <Field Name="_configuration" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Microsoft.AspNetCore.Identity.RoleManager&lt;TRole&gt;" Collapsed="true">
-    <Position X="23.75" Y="1" Width="2.25" />
+    <Position X="24.5" Y="1" Width="2.25" />
     <TypeIdentifier />
   </Class>
   <Class Name="Microsoft.AspNetCore.Identity.UserManager&lt;TUser&gt;" Collapsed="true">
