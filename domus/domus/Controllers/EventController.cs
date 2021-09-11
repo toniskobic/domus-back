@@ -60,8 +60,8 @@ namespace domus.Controllers
             return CreatedAtRoute("GetEvent", new { Id = entity.Id }, null);
         }
 
-        // PUT: api/event/5
-        [HttpPut("{id}")]
+        // PATCH: api/events/5
+        [HttpPatch("{id}")]
         public IActionResult Put(int id, [FromBody] Event entity)
         {
             if (entity == null)

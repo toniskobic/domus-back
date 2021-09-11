@@ -20,7 +20,7 @@ namespace domus.Models.DataManager
 
         public IEnumerable<ApplicationUser> GetAll()
         {
-            return _domusContext.Users.ToList();
+            return _domusContext.Users.Include(a => a.Dormitory);
         }
 
         public ApplicationUser Get(long id)

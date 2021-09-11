@@ -18,11 +18,13 @@ namespace domus.Models.DataManager
 
         public IEnumerable<Event> GetAll()
         {
-            return _domusContext.Events
+            var testa = DateTime.Now;
+            var test = _domusContext.Events
                 .Include(a => a.User)
                 .Include(a => a.EventType)
                 .Include(a => a.Participants)
-                .Where(a => a.DateTo < DateTime.Now);   
+                .Where(a => a.DateTo >       DateTime.Now);
+            return test;   
         }
 
         public Event Get(long id)
@@ -47,7 +49,7 @@ namespace domus.Models.DataManager
                 .Include(a => a.Participants)
                 .Single(b => b.Id == entityToUpdate.Id);
 
-            entityToUpdate.Name = entity.Name;
+            if (entity.Canceled) entityToUpdate.Canceled = entity.Canceled;
 
             _domusContext.SaveChanges();
         }

@@ -26,6 +26,8 @@ namespace domus.Models
         [DataMember]
         public int Limit { get; set; }
         [DataMember]
+        public bool Canceled { get; set; }
+        [DataMember]
         public string Description { get; set; }
         [DataMember]
         public int EventTypeId { get; set; }
