@@ -21,14 +21,6 @@ namespace domus.Models.DataManager
             return _domusContext.Participants.ToList();
         }
 
-        public Participant Get(long id)
-        {
-            var entity = _domusContext.Participants
-                .SingleOrDefault(b => b.EventId == id);
-
-            return entity;
-        }
-
         public Participant GetParticipant(long eventId, string userId)
         {
             var entity = _domusContext.Participants

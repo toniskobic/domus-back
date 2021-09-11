@@ -22,7 +22,7 @@ namespace domus.Models
         public string Name { get; set; }
         [DataMember]
         public int CityId { get; set; }
-
+        [DataMember]
         public virtual City City { get; set; }
         public virtual ICollection<Event> Events { get; set; }
         public virtual ICollection<ApplicationUser> Users { get; set; }

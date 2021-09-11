@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="domus.Controllers.AdController">
+    <Position X="6.5" Y="5.5" Width="1.75" />
+    <AssociationLine Name="_dataRepository" Type="domus.Models.Repository.IDataRepository&lt;TEntity&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.375" Y="5.5" />
+        <Point X="7.375" Y="2.375" />
+        <Point X="9.25" Y="2.375" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAACAEAAAAAAAAAAABAAAg=</HashCode>
+      <FileName>Controllers\AdController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_dataRepository" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="domus.Controllers.AdTypeController">
+    <Position X="4.25" Y="5.5" Width="1.75" />
+    <AssociationLine Name="_dataRepository" Type="domus.Models.Repository.IDataRepository&lt;TEntity&gt;" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.25" Y="5.5" />
+        <Point X="5.25" Y="1.812" />
+        <Point X="9.25" Y="1.812" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAACAEAAAAAAAAAAABAAAg=</HashCode>
+      <FileName>Controllers\AdTypeController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_dataRepository" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="domus.Controllers.CityController">
+    <Position X="9" Y="5.5" Width="1.75" />
+    <AssociationLine Name="_dataRepository" Type="domus.Models.Repository.IDataRepository&lt;TEntity&gt;" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.188" Y="5.5" />
+        <Point X="10.188" Y="4.55" />
+        <Point X="10.188" Y="4.55" />
+        <Point X="10.188" Y="2.623" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAACAEAAAAAAAAAAABAAAg=</HashCode>
+      <FileName>Controllers\CityController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_dataRepository" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="domus.Controllers.DormitoryController">
+    <Position X="13.75" Y="5.5" Width="1.75" />
+    <AssociationLine Name="_dataRepository" Type="domus.Models.Repository.IDataRepository&lt;TEntity&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14.625" Y="5.5" />
+        <Point X="14.625" Y="2.062" />
+        <Point X="12.25" Y="2.062" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAACAEAAAAAAAAAAABAAAg=</HashCode>
+      <FileName>Controllers\DormitoryController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_dataRepository" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="domus.Controllers.EventController">
+    <Position X="16.25" Y="5.5" Width="1.75" />
+    <AssociationLine Name="_dataRepository" Type="domus.Models.Repository.IDataRepository&lt;TEntity&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="16.969" Y="5.5" />
+        <Point X="16.969" Y="1.25" />
+        <Point X="12.25" Y="1.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAACAEAAAAAAAAAAABAAAg=</HashCode>
+      <FileName>Controllers\EventController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_dataRepository" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="domus.Controllers.EventTypeController">
+    <Position X="11.25" Y="5.5" Width="2" />
+    <AssociationLine Name="_dataRepository" Type="domus.Models.Repository.IDataRepository&lt;TEntity&gt;" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.875" Y="5.5" />
+        <Point X="11.875" Y="4.592" />
+        <Point X="11.875" Y="4.592" />
+        <Point X="11.875" Y="2.623" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAACAEAAAAAAAAAAABAAAg=</HashCode>
+      <FileName>Controllers\EventTypeController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_dataRepository" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="domus.Controllers.ParticipantController">
+    <Position X="19" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAACAEAQAAAAAAAAABAAAA=</HashCode>
+      <FileName>Controllers\ParticipantController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_dataRepository" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="domus.Controllers.UserController">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <AssociationLine Name="_dataRepository" Type="domus.Models.Repository.IDataRepository&lt;TEntity&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3" Y="5.5" />
+        <Point X="3" Y="1.188" />
+        <Point X="9.25" Y="1.188" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Controllers\UserController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_dataRepository" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="JWTAuthentication.Controllers.AuthenticateController">
+    <Position X="24.75" Y="5.5" Width="1.5" />
+    <AssociationLine Name="_configuration" Type="Microsoft.Extensions.Configuration.IConfiguration" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="25" Y="5.5" />
+        <Point X="25" Y="4.34" />
+        <Point X="22.375" Y="4.34" />
+        <Point X="22.375" Y="2.94" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="roleManager" Type="Microsoft.AspNetCore.Identity.RoleManager&lt;TRole&gt;" FixedFromPoint="true">
+      <Path>
+        <Point X="25.438" Y="5.5" />
+        <Point X="25.438" Y="1.562" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="userManager" Type="Microsoft.AspNetCore.Identity.UserManager&lt;TUser&gt;" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="24.75" Y="6.405" />
+        <Point X="21.661" Y="6.405" />
+        <Point X="21.661" Y="3.465" />
+        <Point X="19.875" Y="3.465" />
+        <Point X="19.875" Y="1.562" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAgAAAAAAAAAAABIAAAAAEQAAAAAAA=</HashCode>
+      <FileName>Controllers\AuthenticateController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_configuration" />
+      <Field Name="roleManager" />
+      <Field Name="userManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Microsoft.AspNetCore.Identity.RoleManager&lt;TRole&gt;" Collapsed="true">
+    <Position X="23.75" Y="1" Width="2.25" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Microsoft.AspNetCore.Identity.UserManager&lt;TUser&gt;" Collapsed="true">
+    <Position X="18.75" Y="1" Width="2.5" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="domus.Models.Repository.IDataRepository&lt;TEntity&gt;">
+    <Position X="9.25" Y="0.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAABAAAAAAAAAAAEAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Models\Repository\IDataRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Microsoft.Extensions.Configuration.IConfiguration">
+    <Position X="21.5" Y="1" Width="1.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="domus.Models.Repository.IParticipantRepository&lt;TEntity&gt;">
+    <Position X="18.75" Y="3.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAAAAAAAAAAgAAAEAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Models\Repository\IParticipantRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

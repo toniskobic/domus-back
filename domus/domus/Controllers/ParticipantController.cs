@@ -60,30 +60,6 @@ namespace domus.Controllers
             return Ok(participant);
         }
 
-        // PUT: api/participants/5
-        [HttpPut("{dogadjajId}/{korisnikId}")]
-        public IActionResult Put(int dogadjajId, int korisnikId, [FromBody] Participant participant)
-        {
-            if (participant == null)
-            {
-                return BadRequest("Sudionik je prazan.");
-            }
-
-            var participantToUpdate = _dataRepository.Get(dogadjajId);
-            if (participantToUpdate == null)
-            {
-                return NotFound("Sudionik nije pronađen.");
-            }
-
-            if (!ModelState.IsValid)
-            {
-                return BadRequest();
-            }
-
-            _dataRepository.Update(participantToUpdate, participant);
-            return NoContent();
-        }
-
         // PATCH: api/participants/5
         [HttpPatch("{eventId}/{userId}")]
         public IActionResult Patch(int eventId, string userId, [FromBody] Participant participant)
@@ -109,16 +85,16 @@ namespace domus.Controllers
         }
 
         // DELETE: api/participants/5/2
-        [HttpDelete("{dogadjajId}/{korisnikId}")]
-        public IActionResult Delete(int id)
+        [HttpDelete("{eventId}/{userId}")]
+        public IActionResult Delete(int eventId, string userId)
         {
-            var ad = _dataRepository.Get(id);
-            if (ad == null)
+            var participant = _dataRepository.GetParticipant(eventId, userId);
+            if (participant == null)
             {
-                return NotFound("Oglas nije pronađen.");
+                return NotFound("Sudionik nije pronađen.");
             }
 
-            _dataRepository.Delete(ad);
+            _dataRepository.Delete(participant);
             return NoContent();
         }
     }

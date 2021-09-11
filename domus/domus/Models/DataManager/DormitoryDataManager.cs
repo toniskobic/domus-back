@@ -18,7 +18,7 @@ namespace domus.Models.DataManager
 
         public IEnumerable<Dormitory> GetAll()
         {
-            return _domusContext.Dormitories.ToList();
+            return _domusContext.Dormitories.Include(a => a.City);
         }
 
         public Dormitory Get(long id)
