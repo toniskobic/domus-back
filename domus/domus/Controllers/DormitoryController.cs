@@ -29,7 +29,7 @@ namespace domus.Controllers
             return Ok(dormitories);
         }
 
-        // GET: api/dormitory/5
+        // GET: api/dormitories/5
         [Authorize(Roles = UserRoles.Admin)]
         [HttpGet("{id}", Name = "GetDormitory")]
         public IActionResult Get(int id)
@@ -43,7 +43,7 @@ namespace domus.Controllers
             return Ok(dormitory);
         }
 
-        // POST: api/dormitory
+        // POST: api/dormitories
         [Authorize(Roles = UserRoles.Admin)]
         [HttpPost]
         public IActionResult Post([FromBody] Dormitory dormitory)
@@ -62,7 +62,7 @@ namespace domus.Controllers
             return CreatedAtRoute("GetDormitory", new { Id = dormitory.Id }, null);
         }
 
-        // PUT: api/dormitory/5
+        // PUT: api/dormitories/5
         [Authorize(Roles = UserRoles.Admin)]
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody] Dormitory dormitory)
@@ -87,7 +87,7 @@ namespace domus.Controllers
             return NoContent();
         }
 
-        // DELETE: api/dormitory/5
+        // DELETE: api/dormitories/5
         [Authorize(Roles = UserRoles.Admin)]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)

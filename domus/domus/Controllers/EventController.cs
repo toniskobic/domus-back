@@ -21,7 +21,7 @@ namespace domus.Controllers
             _dataRepository = dataRepository;
         }
 
-        // GET: api/event
+        // GET: api/events
         [HttpGet]
         public IActionResult Get()
         {
@@ -29,7 +29,7 @@ namespace domus.Controllers
             return Ok(events);
         }
 
-        // GET: api/event/5
+        // GET: api/events/5
         [HttpGet("{id}", Name = "GetEvent")]
         public IActionResult Get(int id)
         {
@@ -42,7 +42,7 @@ namespace domus.Controllers
             return Ok(entity);
         }
 
-        // POST: api/event
+        // POST: api/events
         [HttpPost]
         public IActionResult Post([FromBody] Event entity)
         {
@@ -62,7 +62,7 @@ namespace domus.Controllers
 
         // PATCH: api/events/5
         [HttpPatch("{id}")]
-        public IActionResult Put(int id, [FromBody] Event entity)
+        public IActionResult Patch(int id, [FromBody] Event entity)
         {
             if (entity == null)
             {
@@ -84,7 +84,7 @@ namespace domus.Controllers
             return NoContent();
         }
 
-        // DELETE: api/event/5
+        // DELETE: api/events/5
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
